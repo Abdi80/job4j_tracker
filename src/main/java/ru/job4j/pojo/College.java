@@ -9,6 +9,8 @@ public class College {
         student.setStudent("Ivan Ivanov");
         student.setGroup("B-5");
         student.setDate(new GregorianCalendar(2023, Calendar.AUGUST, 10));
-        System.out.println(student.getStudent() + " group - " + student.getGroup() + " admission date " + student.getDate().getTime());
+        System.out.println(student.getStudent() + " group - " + student.getGroup()
+                                                + " admission date "
+                                                + student.getDate().getTime());
     }
 }
