@@ -35,10 +35,10 @@ class StartUITest {
         Tracker tracker = new Tracker();
         Item item = new Item("First item");
         tracker.add(item);
-        String[] answers = {String.valueOf(item.getId()), "Test"};
+        String[] answers = {String.valueOf(item.getId())};
         Input input = new MockInput(answers);
         StartUI.deleteItem(input, tracker);
         Item edited = tracker.findById(item.getId());
-        assertThat(edited).isEqualTo(null);
+        assertThat(edited).isNull();
     }
 }
