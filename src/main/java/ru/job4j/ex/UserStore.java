@@ -9,19 +9,19 @@ public class UserStore {
                 break;
             }
         }
-        if (user != null) {
-            return user;
-        } else {
+        if (user == null) {
             throw new UserNotFoundException("User not found");
         }
+        return user;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.isValid() && user.getUsername().length() > 2) {
-            return true;
-        } else {
+        boolean valid = true;
+        if (!user.isValid() || user.getUsername().length() < 3) {
+            valid = false;
             throw new UserInvalidException("User invalid");
         }
+        return valid;
     }
 
     public static void main(String[] args) {
@@ -29,7 +29,7 @@ public class UserStore {
                         new User("Xi", true),
                         new User("Bob", true),
                         new User("Karl", false)};
-        String serchName = "Petr Arsentev";
+        String serchName = "Bob";
         try {
             User user = findUser(users, serchName);
             if (validate(user)) {
