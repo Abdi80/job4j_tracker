@@ -12,7 +12,7 @@ public class FindEl {
         if (result == -1) {
             throw new ElementNotFoundException("Key not found");
         }
-        return result;
+         return result;
     }
 
     public static void main(String[] args) {
