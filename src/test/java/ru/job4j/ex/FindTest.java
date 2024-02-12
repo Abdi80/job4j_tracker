@@ -2,18 +2,19 @@ package ru.job4j.ex;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
 
 class FindTest {
-
     @Test
     void whenIndexIsNegative() {
         String[] data = {"one", "two", "three"};
         int index = -3;
         IllegalArgumentException exception = assertThrows(
                 IllegalArgumentException.class,
-                () -> {Find.get(data, index);}
+                () -> {
+                    Find.get(data, index);
+                }
         );
         assertThat(exception.getMessage()).isEqualTo("Index out of bound");
     }
