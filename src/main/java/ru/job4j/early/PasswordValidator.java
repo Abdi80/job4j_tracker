@@ -26,8 +26,11 @@ public class PasswordValidator {
             if (isDigit(symbol)) {
                 hasDigit = true;
             }
-            if (String.valueOf(symbol).matches("[^A-Za-z0-9]")) {
+            if (!isLetterOrDigit(symbol)) {
                 hasSpecial = true;
+            }
+            if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
+                break;
             }
         }
         if (!hasUpCase) {
