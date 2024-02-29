@@ -9,17 +9,14 @@ public class UniqueText {
         String[] origin = originText.split(" ");
         String[] text = duplicateText.split(" ");
         if (origin.length == text.length) {
+            result = true;
             HashSet<String> check = new HashSet<>();
-            Collections.addAll(check, origin);
-            for (String originWord : check) {
-                for (String word : text) {
+            for (String word : origin) {
+                check.add(word);
+            }
+            for (String word : text) {
+                if (!check.contains(word)) {
                     result = false;
-                    if (originWord.contains(word)) {
-                        result = true;
-                        break;
-                    }
-                }
-                if (!result) {
                     break;
                 }
             }
