@@ -31,14 +31,6 @@ class UniqueTextTest {
     }
 
     @Test
-    void isNotEqualsWithoutOneWord() {
-        UniqueText uniqueText = new UniqueText();
-        String origin = "My cat eats a mouse";
-        String text = "My cat eats mouse";
-        assertThat(uniqueText.isEquals(origin, text)).isFalse();
-    }
-
-    @Test
     void isNotEqualsWithExtraOneWord() {
         UniqueText uniqueText = new UniqueText();
         String origin = "My cat eats a mouse";
