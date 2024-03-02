@@ -8,6 +8,7 @@ public class UsageMap {
         users.put("nick@mail.com", "Nick");
         users.put("mike@mail.com", "Mike");
         users.put("bob@mail.com", "Bob");
+        users.put("mike@mail.com", "Pike");
         for (String key : users.keySet()) {
             System.out.println(key + " = " + users.get(key));
         }
