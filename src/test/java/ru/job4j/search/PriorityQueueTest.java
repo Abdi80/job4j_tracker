@@ -8,7 +8,7 @@ class PriorityQueueTest {
 
     @Test
     public void whenHigherPrioritySecond() {
-        PriorityQueue queue = new PriorityQueue();
+        var queue = new PriorityQueue();
         queue.put(new Task("low", 5));
         queue.put(new Task("urgent", 1));
         queue.put(new Task("middle", 3));
@@ -18,7 +18,7 @@ class PriorityQueueTest {
 
     @Test
     public void whenHigherPriorityFirst() {
-        PriorityQueue queue = new PriorityQueue();
+        var queue = new PriorityQueue();
         queue.put(new Task("urgent", 0));
         queue.put(new Task("low", 2));
         queue.put(new Task("middle", 1));
@@ -28,7 +28,7 @@ class PriorityQueueTest {
 
     @Test
     public void whenHigherPriorityLast() {
-        PriorityQueue queue = new PriorityQueue();
+        var queue = new PriorityQueue();
         queue.put(new Task("Low", 5));
         queue.put(new Task("middle", 3));
         queue.put(new Task("urgent", 1));
@@ -38,7 +38,7 @@ class PriorityQueueTest {
 
     @Test
     public void whenHigherPriorityEquals() {
-        PriorityQueue queue = new PriorityQueue();
+        var queue = new PriorityQueue();
         queue.put(new Task("Low", 5));
         queue.put(new Task("urgent", 5));
         queue.put(new Task("middle", 5));
